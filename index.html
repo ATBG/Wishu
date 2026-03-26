@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="particles-container"></div>
+    <div id="main-container">
+        <!-- Page 1: Heart Drop & Tree Grow -->
+        <section id="page1" class="page active">
+            <div id="heart-container">
+                <div class="falling-heart">❤️</div>
+            </div>
+            <canvas id="treeCanvas"></canvas>
+        </section>
+
+        <!-- Page 2: Typewriter Intro -->
+        <section id="page2" class="page hidden">
+            <div class="content-wrapper">
+                <canvas id="treeCanvasPage2"></canvas>
+                <div class="message-container">
+                    <div id="typewriter-text"></div>
+                    <button id="proceed-btn" class="hidden">Proceed ❤️</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Page 3: Balloon Floating & Popping -->
+        <section id="page3" class="page hidden">
+            <div id="balloon-container"></div>
+            <div class="hint-text">Pop the balloons!</div>
+        </section>
+
+        <!-- Page 4: Cake & Candle Blowing -->
+        <section id="page4" class="page hidden">
+            <div class="cake-container">
+                <!-- Cake SVG will be injected here -->
+                <div id="cake-svg"></div>
+                <!-- Candles -->
+                <div id="candles-container"></div>
+            </div>
+            <div class="hint-text" id="blow-hint">Blow into your microphone, or click the candles!</div>
+        </section>
+
+        <!-- Page 5: Gift Box & Birthday Message -->
+        <section id="page5" class="page hidden">
+            <canvas id="confettiCanvas"></canvas>
+            <div id="gift-box-container">
+                <div class="gift-box" id="gift-box">
+                    <div class="gift-lid"></div>
+                    <div class="gift-body"></div>
+                    <div class="gift-ribbon-vertical"></div>
+                    <div class="gift-ribbon-horizontal"></div>
+                    <div class="gift-bow"></div>
+                </div>
+            </div>
+            <h1 id="bday-message" class="hidden">Happy Birthday, <span class="crush-name">[CRUSH_NAME]</span>!</h1>
+        </section>
+    </div>
+
+    <!-- Scripts -->
+    <script src="main.js"></script>
+    <script src="tree.js"></script>
+    <script src="typewriter.js"></script>
+    <script src="balloons.js"></script>
+    <script src="cake.js"></script>
+    <script src="gift.js"></script>
+</body>
+</html>
