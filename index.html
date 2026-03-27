@@ -8,6 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Nunito:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <audio id="sfx-gift" src="https://cdn.pixabay.com/download/audio/2021/08/04/audio_964ba9c4ab.mp3?filename=gift-open-110624.mp3" preload="auto"></audio>
+    <audio id="sfx-confetti" src="https://cdn.pixabay.com/download/audio/2022/03/15/audio_21b1507d3d.mp3?filename=pop-124472.mp3" preload="auto"></audio>
     <div id="particles-container"></div>
     <div id="main-container">
         <!-- Page 1: Heart Drop & Tree Grow -->
@@ -38,9 +40,16 @@
         <!-- Page 4: Cake & Candle Blowing -->
         <section id="page4" class="page hidden">
             <div class="cake-container">
-                <!-- Cake SVG will be injected here -->
-                <div id="cake-svg"></div>
-                <!-- Candles -->
+                <div class="cake-art">
+                    <div class="cake-top"></div>
+                    <div class="cake-mid"></div>
+                    <div class="cake-base"></div>
+                    <div class="cake-drip d1"></div>
+                    <div class="cake-drip d2"></div>
+                    <div class="cake-drip d3"></div>
+                    <div class="cake-heart h1"></div>
+                    <div class="cake-heart h2"></div>
+                </div>
                 <div id="candles-container"></div>
             </div>
             <div class="hint-text" id="blow-hint">Blow into your microphone, or click the candles!</div>
@@ -58,7 +67,8 @@
                     <div class="gift-bow"></div>
                 </div>
             </div>
-            <h1 id="bday-message" class="hidden">Happy Birthday, <span class="crush-name">[CRUSH_NAME]</span>!</h1>
+            <h1 id="bday-message" class="hidden">Happy Birthday, <span class="crush-name">NAME</span>!</h1>
+            <p id="final-paragraph" class="final-text hidden"></p>
         </section>
     </div>
 

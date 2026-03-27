@@ -4,7 +4,7 @@ let currentPage = 1;
 // Sparkle Effect Logic
 function createSparkles() {
     const container = document.getElementById('particles-container');
-    const sparkleCount = 50;
+    const sparkleCount = 70;
 
     for (let i = 0; i < sparkleCount; i++) {
         const sparkle = document.createElement('div');
@@ -23,6 +23,25 @@ function createSparkles() {
         sparkle.style.animationDelay = `${delay}s`;
 
         container.appendChild(sparkle);
+    }
+}
+
+function createOrbs() {
+    const container = document.getElementById('particles-container');
+    if (!container) return;
+
+    const orbCount = 6;
+    for (let i = 0; i < orbCount; i++) {
+        const orb = document.createElement('div');
+        orb.className = 'orb';
+        const size = Math.random() * 120 + 140;
+        orb.style.width = `${size}px`;
+        orb.style.height = `${size}px`;
+        orb.style.left = `${Math.random() * 90}%`;
+        orb.style.top = `${Math.random() * 90}%`;
+        orb.style.animationDuration = `${14 + Math.random() * 10}s`;
+        orb.style.animationDelay = `${Math.random() * 8}s`;
+        container.appendChild(orb);
     }
 }
 
@@ -62,6 +81,7 @@ function goToPage(pageNumber) {
 // Ensure DOM is loaded before starting
 document.addEventListener('DOMContentLoaded', () => {
     createSparkles();
+    createOrbs();
     
     // Start Page 1 timeline
     setTimeout(() => {
